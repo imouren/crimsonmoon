@@ -24,6 +24,14 @@ CACHES = {
     }
 }
 
+LIST_APPS = list(INSTALLED_APPS)
+LIST_APPS.extend([
+    'platforms.test.users',
+])
+INSTALLED_APPS = tuple(set(LIST_APPS))
+
+
+
 TIME_ZONE = 'Asia/Shanghai'
 LANGUAGE_CODE = 'zh-cn'
 SITE_URL = 'http://127.0.0.1:8000'
